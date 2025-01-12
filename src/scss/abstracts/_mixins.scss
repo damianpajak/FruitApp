@@ -1,0 +1,11 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fixedLayout {
+  @include flexCenter;
+  background-color: $primary-color;
+  height: 10vh;
+}

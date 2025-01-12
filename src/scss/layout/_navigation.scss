@@ -1,0 +1,21 @@
+.nav {
+  @include fixedLayout;
+
+  &_menu {
+    display: flex;
+    justify-content: end;
+
+    .nav_menu-link {
+      text-decoration: none;
+      color: $third-color;
+      font-weight: 600;
+      font-size: 30px;
+      font-family: $primary-font;
+    }
+
+    li:nth-child(2) {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+}

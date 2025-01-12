@@ -1,0 +1,7 @@
+.footer {
+  @include fixedLayout();
+  flex-direction: column;
+  color: $third-color;
+  font-size: 25px;
+  font-family: $primary-font;
+}
