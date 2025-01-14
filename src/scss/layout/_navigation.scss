@@ -1,21 +1,34 @@
 .nav {
   @include fixedLayout;
 
-  &_menu {
+  .nav-container {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 
-    .nav_menu-link {
-      text-decoration: none;
+    &_logo {
+      @include flexCenter($justifyContent: space-between);
+      flex-direction: row;
+      width: 195px;
+      font-family: $second-font;
+      font-size: 35px;
       color: $third-color;
-      font-weight: 600;
-      font-size: 30px;
-      font-family: $primary-font;
     }
 
-    li:nth-child(2) {
-      margin-left: 50px;
-      margin-right: 50px;
+    &_menu {
+      @include flexCenter;
+
+      &-link {
+        text-decoration: none;
+        color: $third-color;
+        font-weight: 600;
+        font-size: 30px;
+        font-family: $primary-font;
+      }
+
+      li:nth-child(2) {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
     }
   }
 }
