@@ -1,3 +1,9 @@
+import { FruitInfo } from "../components/FruitsPage/FruitInfo";
+
 export const Fruits = () => {
-  return <p>Here, will be records all fruits with database!</p>;
+  return (
+    <div className="container">
+      <FruitInfo />
+    </div>
+  );
 };
