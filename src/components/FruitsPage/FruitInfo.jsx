@@ -28,14 +28,27 @@ export const FruitInfo = () => {
 
   return (
     <div>
-      <h1>Lista Owoców:</h1>
-      <ul>
-        {fruits.map((fruit) => (
-          <li key={fruit.id}>
-            {fruit.name} - {fruit.family}
-          </li>
-        ))}
-      </ul>
+      <h1>Fruit list:</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Family</th>
+            <th>Genus</th>
+            <th>Order</th>
+          </tr>
+        </thead>
+        <tbody>
+          {fruits.map((fruit) => (
+            <tr key={fruit.id}>
+              <td>{fruit.name}</td>
+              <td>{fruit.family}</td>
+              <td>{fruit.genus}</td>
+              <td>{fruit.order}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
