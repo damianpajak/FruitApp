@@ -1,4 +1,9 @@
 .main {
-  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   background-color: $fourth-color;
+  min-height: 80vh;
+  position: relative;
+  top: 0;
 }
