@@ -1,0 +1,63 @@
+.fruits {
+  @include flexCenter;
+  flex-direction: column;
+  padding: 30px 0 50px 0;
+}
+
+.fruits_header-title {
+  font-family: $primary-font;
+  font-size: 4rem;
+  font-weight: 600;
+  color: $primary-color;
+  margin: 15px 0;
+}
+
+.fruits_table {
+  width: 100%;
+  border: 1px solid $second-color;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  font-family: $primary-font;
+  font-size: 2rem;
+
+  tr:nth-child(even) {
+    background-color: $second-color;
+  }
+
+  .fruit_table-row-header {
+    background-color: $primary-color;
+    box-shadow: 0 1px $second-color;
+    color: $fourth-color;
+    font-size: 2.7rem;
+  }
+
+  .fruit_table-cell {
+    padding: 15px 5px 15px 15px;
+    width: 36rem;
+    font-weight: 500;
+  }
+}
+
+.fruit_input {
+  background-color: $fifth-color;
+  margin: 15px 10px 15px 10px;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1.5rem;
+  width: 20rem;
+  font-family: $primary-font;
+  font-size: 1.5rem;
+}
+
+.fruit_select {
+  background-color: $fifth-color;
+  margin: 15px 10px 15px 10px;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1.5rem;
+  width: 24rem;
+  font-family: $primary-font;
+  font-size: 1.5rem;
+}

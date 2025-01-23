@@ -1,0 +1,15 @@
+.home {
+  @include flexCenter;
+  flex-direction: column;
+  font-family: $primary-font;
+
+  img {
+    width: 300px;
+  }
+
+  .home_header {
+    font-size: 3rem;
+    font-weight: 600;
+    color: $primary-color;
+  }
+}
