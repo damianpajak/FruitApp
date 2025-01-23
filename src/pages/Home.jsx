@@ -1,7 +1,10 @@
+import { HomeLogo } from "../components/HomePage/HomeLogo";
+
 export const Home = () => {
   return (
     <div className="home container">
-      <p>Here, will be something interesting ... but I do not know what XD</p>
+      <HomeLogo />
+      <p className="home_header">Welcome to the page dedicated to fruits!</p>
     </div>
   );
 };
