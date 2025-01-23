@@ -1,12 +1,36 @@
-export const FruitSearch = ({ searchFruit, handleSearchChange }) => {
+import { FruitSearchFamily } from "./FruitSearchFamily";
+import { FruitSearchFruit } from "./FruitSearchFruit";
+import { FruitSearchGenus } from "./FruitSearchGenus";
+import { FruitSearchOrder } from "./FruitSearchOrder";
+
+export const FruitSearch = ({
+  searchFruit,
+  handleSearchChange,
+  fruitFamily,
+  handleFamilyChange,
+  fruitGenus,
+  handleGenusChange,
+  fruitOrder,
+  handleOrderChange,
+}) => {
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search your fruit"
-        value={searchFruit}
-        onChange={handleSearchChange}
+    <form>
+      <FruitSearchFruit
+        searchFruit={searchFruit}
+        handleSearchChange={handleSearchChange}
       />
-    </div>
+      <FruitSearchFamily
+        fruitFamily={fruitFamily}
+        handleFamilyChange={handleFamilyChange}
+      />
+      <FruitSearchGenus
+        fruitGenus={fruitGenus}
+        handleGenusChange={handleGenusChange}
+      />
+      <FruitSearchOrder
+        fruitOrder={fruitOrder}
+        handleOrderChange={handleOrderChange}
+      />
+    </form>
   );
 };
