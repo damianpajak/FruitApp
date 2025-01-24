@@ -23,11 +23,8 @@
         font-weight: 600;
         font-size: 30px;
         font-family: $primary-font;
-      }
-
-      li:nth-child(2) {
-        margin-left: 50px;
-        margin-right: 50px;
+        outline: none;
+        padding: 2.2rem 3.5rem;
       }
     }
   }

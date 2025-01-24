@@ -1,9 +1,43 @@
 .footer {
   @include fixedLayout();
-  flex-direction: column;
   color: $third-color;
-  font-size: 20px;
+  font-size: 1.6rem;
   font-family: $primary-font;
   position: absolute;
   width: 100%;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+
+    .footer_text {
+      &:nth-child(2) {
+        margin: 5px 0;
+      }
+    }
+  }
+
+  &_icons {
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: none;
+
+    p {
+      font-size: 1.5rem;
+    }
+    
+    a {
+      outline: none;
+    }
+
+    i {
+      margin: 1rem 0.5rem;
+      color: $third-color;
+
+      &:hover {
+        color: $fourth-color;
+      }
+    }
+  }
 }
