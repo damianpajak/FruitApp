@@ -27,7 +27,7 @@ export const useFilterFruitData = () => {
       return matchesSearch && matchesFamily && matchesOrder && matchesGenus;
     });
   }, [fruits, searchFruit, selectFamily, selectOrder, selectGenus]);
-  
+
   const handleSearchChange = (e) => {
     setSearchFruit(e.target.value);
   };
