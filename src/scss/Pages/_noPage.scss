@@ -1,0 +1,20 @@
+.noPage {
+  @include flexCenter;
+  flex-direction: column;
+  font-family: $primary-font;
+  height: 80vh;
+
+  &_img {
+    width: 150px;
+  }
+
+  &_text {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 1rem;
+
+    &:nth-of-type(1) {
+      padding-top: 3rem;
+    }
+  }
+}
