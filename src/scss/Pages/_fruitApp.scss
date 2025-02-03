@@ -1,0 +1,270 @@
+.fruitApp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  font-family: $primary-font;
+
+  .fruitApp-container {
+    background-color: $fifth-color;
+    width: 31.5%;
+    height: 70vh;
+    border: 0.6rem solid $primary-color;
+    border-radius: 1rem;
+    text-align: center;
+
+    &:nth-of-type(1) {
+      overflow-y: scroll;
+      scrollbar-width: thin;
+    }
+  }
+
+  .fruitApp_showNewRecipe {
+    @include flexCenter;
+
+    .showNewRecipe {
+      position: relative;
+      width: 40%;
+      display: inline-block;
+      cursor: pointer;
+
+      .showNewRecipe_btn {
+        background-color: $second-color;
+        color: $fifth-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 1rem 0;
+        border-radius: 0.5rem;
+        box-shadow: 0 1rem 0 $primary-color;
+        font-size: 1.4rem;
+        font-weight: 600;
+
+        &:active {
+          top: 10px;
+          background-color: $second-color;
+          box-shadow: inset 0 -0.3rem 0 $primary-color;
+        }
+
+        i {
+          padding-top: 0.5rem;
+        }
+      }
+    }
+
+    .fruitApp_showNewRecipe-form {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      font-size: 1.2rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        color: $primary-color;
+        font-weight: 600;
+      }
+
+      .showNewRecipe-form_label {
+        margin-top: 1rem;
+      }
+
+      .showNewRecipe-form_input,
+      .showNewRecipe-form_textarea,
+      .showNewRecipe-form_select {
+        font-family: $primary-font;
+        background-color: $fourth-color;
+        border: 0.1rem solid $primary-color;
+        border-radius: 1rem;
+        margin-top: 0.5rem;
+        padding-left: 1rem;
+        border: none;
+      }
+
+      .showNewRecipe-form_input {
+        border: 0.2rem solid $primary-color;
+      }
+
+      .showNewRecipe-form_select {
+        border: 0.2rem solid $primary-color;
+      }
+
+      .showNewRecipe-form_textarea {
+        resize: none;
+        height: 5rem;
+        padding: 0.5rem;
+        border: 0.2rem solid $primary-color;
+      }
+
+      .showNewRecipe-form_btns {
+        @include flexCenter;
+
+        .showNewRecipe-form_btn {
+          @include flexCenter;
+          position: relative;
+          margin-top: 1rem;
+          padding: 1rem 5rem;
+          background-color: $second-color;
+          color: $fifth-color;
+          border: 0;
+          border-radius: 0.5rem;
+          box-shadow: 0 1rem 0 $primary-color;
+          font-size: 1.4rem;
+          font-weight: 600;
+
+          &:active {
+            top: 10px;
+            background-color: $second-color;
+            box-shadow: inset 0 -0.3rem 0 $primary-color;
+          }
+
+          &:nth-child(2) {
+            margin: 1rem 1rem 0 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .fruitApp_viewBasic {
+    @include flexCenter;
+    flex-direction: column;
+    height: 100%;
+
+    .fruitApp_viewBasicText {
+      font-size: 3rem;
+      font-weight: 600;
+      color: $primary-color;
+      width: 90%;
+
+      &:nth-child(2) {
+        margin: 3rem 0;
+      }
+    }
+  }
+
+  .recipeList {
+    @include flexCenter;
+    flex-direction: column;
+    width: 100%;
+
+    &_element {
+      @include flexCenter;
+      flex-direction: column;
+      cursor: pointer;
+      width: 90%;
+      background-color: $fourth-color;
+      margin-bottom: 1rem;
+      border: 0.3rem solid $primary-color;
+      border-radius: 1rem;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: $primary-color;
+      padding: 1.5rem 0;
+
+      &:hover {
+        background-color: $second-color;
+        color: $fifth-color;
+      }
+
+      button {
+        width: 20%;
+        padding: 0.4rem;
+        border-radius: 0.5rem;
+        border: 0.1rem solid $primary-color;
+        margin-top: 0.8rem;
+
+        &:hover {
+          cursor: grab;
+        }
+      }
+
+      span {
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .recipeBox-header {
+    font-size: 3.5rem;
+    margin: 1.5rem 0;
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+  .error-msg {
+    margin-top: 0.1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ff3333;
+  }
+
+  .recipeDataView {
+    @include flexCenter;
+    flex-direction: column;
+    height: 100%;
+
+    &_header {
+      color: $primary-color;
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin: 0.6rem 0;
+    }
+
+    &_header-mini {
+      color: $primary-color;
+      font-size: 1.6rem;
+      font-weight: 600;
+
+      span {
+        color: #1c1c1d;
+      }
+    }
+
+    &_data {
+      border: 0.2rem solid $primary-color;
+      border-radius: 0.5rem;
+      width: 85%;
+      padding: 0.5rem 0;
+      overflow-wrap: break-word;
+      max-height: 1rem;
+      background-color: $fourth-color;
+      font-weight: 600;
+    }
+
+    &_textarea {
+      border: 0.2rem solid $primary-color;
+      border-radius: 0.5rem;
+      width: 85%;
+      padding: 0.5rem 0;
+      overflow-wrap: break-word;
+      overflow-y: scroll;
+      height: 3rem;
+      background-color: $fourth-color;
+      font-weight: 600;
+    }
+
+    &_table {
+      width: 85%;
+      th,
+      td {
+        border: 0.2rem solid $primary-color;
+        padding: 0.5rem 0;
+      }
+
+      th {
+        font-weight: 600;
+        background-color: $second-color;
+      }
+
+      td {
+        background-color: $third-color;
+      }
+    }
+  }
+}

@@ -26,7 +26,7 @@ export const HomeHeader = () => {
 
   return (
     <div>
-      <p className="home_header">{displayText}</p>
+      <p className="home_header typeEffect">{displayText}</p>
     </div>
   );
 };
