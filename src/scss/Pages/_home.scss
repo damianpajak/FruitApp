@@ -1,3 +1,13 @@
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: $primary-color;
+  }
+}
+
 .home {
   @include flexCenter;
   flex-direction: column;
@@ -23,5 +33,12 @@
     &:nth-child(1) {
       padding-top: 6rem;
     }
+  }
+
+  .typeEffect {
+    overflow: hidden;
+    border-right: 0.15em solid $primary-color;
+    white-space: nowrap;
+    animation: blink-caret 0.75s step-end infinite;
   }
 }
