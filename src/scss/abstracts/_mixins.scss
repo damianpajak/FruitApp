@@ -1,3 +1,5 @@
+@use "../abstracts/variables";
+
 @mixin flexCenter($justifyContent: center) {
   display: flex;
   align-items: center;
@@ -6,6 +8,6 @@
 
 @mixin fixedLayout {
   @include flexCenter;
-  background-color: $primary-color;
+  background-color: variables.$primary-color;
   height: 10vh;
 }

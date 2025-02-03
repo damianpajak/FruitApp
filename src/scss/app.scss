@@ -1,18 +1,18 @@
 // Abstracts
-@import "./abstracts/mixins";
-@import "./abstracts/variables";
+@use "abstracts/variables";
+@use "abstracts/mixins";
 
 // Base
-@import "./Base/reset";
-@import "./Base/base";
+@use "Base/reset";
+@use "Base/base";
 
 // Layout
-@import "./Layout/navigation";
-@import "./Layout/footer";
-@import "./Layout/main";
+@use "Layout/navigation";
+@use "Layout/footer";
+@use "Layout/main";
 
 // Pages
-@import "./Pages/home";
-@import "./Pages/fruits";
-@import "./Pages/fruitApp";
-@import "./Pages/noPage";
+@use "Pages/home";
+@use "Pages/fruits";
+@use "Pages/fruitApp";
+@use "Pages/noPage";

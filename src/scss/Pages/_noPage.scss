@@ -1,7 +1,10 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
 .noPage {
-  @include flexCenter;
+  @include mixins.flexCenter;
   flex-direction: column;
-  font-family: $primary-font;
+  font-family: variables.$primary-font;
   height: 80vh;
 
   &_img {

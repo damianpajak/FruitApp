@@ -1,28 +1,31 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
 .nav {
-  @include fixedLayout;
+  @include mixins.fixedLayout;
 
   .nav-container {
     display: flex;
     justify-content: space-between;
 
     &_logo {
-      @include flexCenter($justifyContent: space-between);
+      @include mixins.flexCenter($justifyContent: space-between);
       flex-direction: row;
       width: 195px;
-      font-family: $second-font;
+      font-family: variables.$second-font;
       font-size: 35px;
-      color: $third-color;
+      color: variables.$third-color;
     }
 
     &_menu {
-      @include flexCenter;
+      @include mixins.flexCenter;
 
       &-link {
         text-decoration: none;
-        color: $fourth-color;
+        color: variables.$fourth-color;
         font-weight: 600;
         font-size: 3rem;
-        font-family: $primary-font;
+        font-family: variables.$primary-font;
         outline: none;
         padding: 2.3rem 3.5rem;
       }

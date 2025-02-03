@@ -1,8 +1,11 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
 .footer {
-  @include fixedLayout();
-  color: $third-color;
+  @include mixins.fixedLayout();
+  color: variables.$third-color;
   font-size: 1.6rem;
-  font-family: $primary-font;
+  font-family: variables.$primary-font;
   position: absolute;
   width: 100%;
 
@@ -26,17 +29,17 @@
     p {
       font-size: 1.5rem;
     }
-    
+
     a {
       outline: none;
     }
 
     i {
       margin: 1rem 0.5rem;
-      color: $third-color;
+      color: variables.$third-color;
 
       &:hover {
-        color: $fourth-color;
+        color: variables.$fourth-color;
       }
     }
   }

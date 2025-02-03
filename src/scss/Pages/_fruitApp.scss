@@ -1,16 +1,19 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
 .fruitApp {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 80vh;
-  font-family: $primary-font;
+  font-family: variables.$primary-font;
 
   .fruitApp-container {
-    background-color: $fifth-color;
+    background-color: variables.$fifth-color;
     width: 31.5%;
     height: 70vh;
-    border: 0.6rem solid $primary-color;
+    border: 0.6rem solid variables.$primary-color;
     border-radius: 1rem;
     text-align: center;
 
@@ -21,7 +24,7 @@
   }
 
   .fruitApp_showNewRecipe {
-    @include flexCenter;
+    @include mixins.flexCenter;
 
     .showNewRecipe {
       position: relative;
@@ -30,8 +33,8 @@
       cursor: pointer;
 
       .showNewRecipe_btn {
-        background-color: $second-color;
-        color: $fifth-color;
+        background-color: variables.$second-color;
+        color: variables.$fifth-color;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,14 +42,14 @@
         position: relative;
         padding: 1rem 0;
         border-radius: 0.5rem;
-        box-shadow: 0 1rem 0 $primary-color;
+        box-shadow: 0 1rem 0 variables.$primary-color;
         font-size: 1.4rem;
         font-weight: 600;
 
         &:active {
           top: 10px;
-          background-color: $second-color;
-          box-shadow: inset 0 -0.3rem 0 $primary-color;
+          background-color: variables.$second-color;
+          box-shadow: inset 0 -0.3rem 0 variables.$primary-color;
         }
 
         i {
@@ -64,7 +67,7 @@
       label {
         display: flex;
         flex-direction: column;
-        color: $primary-color;
+        color: variables.$primary-color;
         font-weight: 600;
       }
 
@@ -75,9 +78,9 @@
       .showNewRecipe-form_input,
       .showNewRecipe-form_textarea,
       .showNewRecipe-form_select {
-        font-family: $primary-font;
-        background-color: $fourth-color;
-        border: 0.1rem solid $primary-color;
+        font-family: variables.$primary-font;
+        background-color: variables.$fourth-color;
+        border: 0.1rem solid variables.$primary-color;
         border-radius: 1rem;
         margin-top: 0.5rem;
         padding-left: 1rem;
@@ -85,40 +88,40 @@
       }
 
       .showNewRecipe-form_input {
-        border: 0.2rem solid $primary-color;
+        border: 0.2rem solid variables.$primary-color;
       }
 
       .showNewRecipe-form_select {
-        border: 0.2rem solid $primary-color;
+        border: 0.2rem solid variables.$primary-color;
       }
 
       .showNewRecipe-form_textarea {
         resize: none;
         height: 5rem;
         padding: 0.5rem;
-        border: 0.2rem solid $primary-color;
+        border: 0.2rem solid variables.$primary-color;
       }
 
       .showNewRecipe-form_btns {
-        @include flexCenter;
+        @include mixins.flexCenter;
 
         .showNewRecipe-form_btn {
-          @include flexCenter;
+          @include mixins.flexCenter;
           position: relative;
           margin-top: 1rem;
           padding: 1rem 5rem;
-          background-color: $second-color;
-          color: $fifth-color;
+          background-color: variables.$second-color;
+          color: variables.$fifth-color;
           border: 0;
           border-radius: 0.5rem;
-          box-shadow: 0 1rem 0 $primary-color;
+          box-shadow: 0 1rem 0 variables.$primary-color;
           font-size: 1.4rem;
           font-weight: 600;
 
           &:active {
             top: 10px;
-            background-color: $second-color;
-            box-shadow: inset 0 -0.3rem 0 $primary-color;
+            background-color: variables.$second-color;
+            box-shadow: inset 0 -0.3rem 0 variables.$primary-color;
           }
 
           &:nth-child(2) {
@@ -130,14 +133,14 @@
   }
 
   .fruitApp_viewBasic {
-    @include flexCenter;
+    @include mixins.flexCenter;
     flex-direction: column;
     height: 100%;
 
     .fruitApp_viewBasicText {
       font-size: 3rem;
       font-weight: 600;
-      color: $primary-color;
+      color: variables.$primary-color;
       width: 90%;
 
       &:nth-child(2) {
@@ -147,34 +150,34 @@
   }
 
   .recipeList {
-    @include flexCenter;
+    @include mixins.flexCenter;
     flex-direction: column;
     width: 100%;
 
     &_element {
-      @include flexCenter;
+      @include mixins.flexCenter;
       flex-direction: column;
       cursor: pointer;
       width: 90%;
-      background-color: $fourth-color;
+      background-color: variables.$fourth-color;
       margin-bottom: 1rem;
-      border: 0.3rem solid $primary-color;
+      border: 0.3rem solid variables.$primary-color;
       border-radius: 1rem;
       font-size: 1.8rem;
       font-weight: 800;
-      color: $primary-color;
+      color: variables.$primary-color;
       padding: 1.5rem 0;
 
       &:hover {
-        background-color: $second-color;
-        color: $fifth-color;
+        background-color: variables.$second-color;
+        color: variables.$fifth-color;
       }
 
       button {
         width: 20%;
         padding: 0.4rem;
         border-radius: 0.5rem;
-        border: 0.1rem solid $primary-color;
+        border: 0.1rem solid variables.$primary-color;
         margin-top: 0.8rem;
 
         &:hover {
@@ -185,7 +188,7 @@
       span {
         font-size: 1.2rem;
         font-weight: 800;
-        color: $primary-color;
+        color: variables.$primary-color;
       }
     }
   }
@@ -193,7 +196,7 @@
   .recipeBox-header {
     font-size: 3.5rem;
     margin: 1.5rem 0;
-    color: $primary-color;
+    color: variables.$primary-color;
     font-weight: 600;
   }
 
@@ -205,19 +208,19 @@
   }
 
   .recipeDataView {
-    @include flexCenter;
+    @include mixins.flexCenter;
     flex-direction: column;
     height: 100%;
 
     &_header {
-      color: $primary-color;
+      color: variables.$primary-color;
       font-size: 2.2rem;
       font-weight: 600;
       margin: 0.6rem 0;
     }
 
     &_header-mini {
-      color: $primary-color;
+      color: variables.$primary-color;
       font-size: 1.6rem;
       font-weight: 600;
 
@@ -227,25 +230,25 @@
     }
 
     &_data {
-      border: 0.2rem solid $primary-color;
+      border: 0.2rem solid variables.$primary-color;
       border-radius: 0.5rem;
       width: 85%;
       padding: 0.5rem 0;
       overflow-wrap: break-word;
       max-height: 1rem;
-      background-color: $fourth-color;
+      background-color: variables.$fourth-color;
       font-weight: 600;
     }
 
     &_textarea {
-      border: 0.2rem solid $primary-color;
+      border: 0.2rem solid variables.$primary-color;
       border-radius: 0.5rem;
       width: 85%;
       padding: 0.5rem 0;
       overflow-wrap: break-word;
       overflow-y: scroll;
       height: 3rem;
-      background-color: $fourth-color;
+      background-color: variables.$fourth-color;
       font-weight: 600;
     }
 
@@ -253,17 +256,17 @@
       width: 85%;
       th,
       td {
-        border: 0.2rem solid $primary-color;
+        border: 0.2rem solid variables.$primary-color;
         padding: 0.5rem 0;
       }
 
       th {
         font-weight: 600;
-        background-color: $second-color;
+        background-color: variables.$second-color;
       }
 
       td {
-        background-color: $third-color;
+        background-color: variables.$third-color;
       }
     }
   }

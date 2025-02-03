@@ -1,18 +1,21 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
 @keyframes blink-caret {
   from,
   to {
     border-color: transparent;
   }
   50% {
-    border-color: $primary-color;
+    border-color: variables.$primary-color;
   }
 }
 
 .home {
-  @include flexCenter;
+  @include mixins.flexCenter;
   flex-direction: column;
   height: 80vh;
-  font-family: $primary-font;
+  font-family: variables.$primary-font;
 
   img {
     width: 30rem;
@@ -21,7 +24,7 @@
   .home_header {
     font-size: 5rem;
     font-weight: 600;
-    color: $primary-color;
+    color: variables.$primary-color;
   }
 
   .home_text {
@@ -37,7 +40,7 @@
 
   .typeEffect {
     overflow: hidden;
-    border-right: 0.15em solid $primary-color;
+    border-right: 0.15em solid variables.$primary-color;
     white-space: nowrap;
     animation: blink-caret 0.75s step-end infinite;
   }

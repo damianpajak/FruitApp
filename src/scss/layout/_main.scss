@@ -1,8 +1,10 @@
+@use "../abstracts/variables";
+
 .main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: $fourth-color;
+  background-color: variables.$fourth-color;
   min-height: 80vh;
   position: relative;
   top: 0;
