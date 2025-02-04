@@ -8,7 +8,7 @@ app.use(cors());
 app.get("/api/fruit/all", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://www.fruityvice.com/api/fruit/all`
+      "https://www.fruityvice.com/api/fruit/all"
     );
     res.json(response.data);
   } catch (error) {
