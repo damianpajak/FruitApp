@@ -17,7 +17,4 @@ app.get("/api/fruit/all", async (req, res) => {
   }
 });
 
-const PORT = 4000;
-app.listen(PORT, () => {
-  console.log(`Proxy server running on http://localhost:${PORT}`);
-});
+export default app;
