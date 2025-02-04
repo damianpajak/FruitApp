@@ -12,7 +12,7 @@ export const Navigation = () => {
         <div className="nav-container container">
           <div className="nav-container_logo">
             <img
-              src="src\img\fruits_logo.png"
+              src="img\fruits_logo.png"
               alt="Fruit logo"
               style={{ width: 50 }}
             />
