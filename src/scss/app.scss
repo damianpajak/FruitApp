@@ -3,8 +3,8 @@
 @use "abstracts/mixins";
 
 // Base
-@use "Base/reset";
-@use "Base/base";
+@use "base/reset";
+@use "base/base";
 
 // Layout
 @use "Layout/navigation";
