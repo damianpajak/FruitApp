@@ -7,9 +7,9 @@
 @use "base/base";
 
 // Layout
-@use "Layout/navigation";
-@use "Layout/footer";
-@use "Layout/main";
+@use "layout/navigation";
+@use "layout/footer";
+@use "layout/main";
 
 // Pages
 @use "Pages/home";
