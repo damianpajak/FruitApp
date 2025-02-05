@@ -209,8 +209,8 @@
     @include mixins.flexCenter;
     flex-direction: column;
     height: 100%;
-    padding: 1rem 0;
-
+    margin: 2rem 0 1rem 0;
+    
     &_header {
       color: variables.$primary-color;
       font-size: 2.2rem;
@@ -243,7 +243,7 @@
       border: 0.2rem solid variables.$primary-color;
       border-radius: 0.5rem;
       width: 85%;
-      padding: 0.5rem 0;
+      padding: 1rem 0;
       overflow-wrap: break-word;
       overflow-y: scroll;
       height: 3rem;
