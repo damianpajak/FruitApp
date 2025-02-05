@@ -7,8 +7,6 @@ export const getRecipes = async () => {
     return [];
   }
 
-  console.log("Dane pobrane z Supabase:", data);
-
   return data.map((recipe) => ({
     ...recipe,
     fruits: recipe.fruits
