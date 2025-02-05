@@ -10,7 +10,6 @@ export const useShowFruitData = () => {
     const getFruits = async () => {
       try {
         const response = await getAllFruits();
-        console.log("API Response:", response); 
         setFruits(Array.isArray(response) ? response : []); 
       } catch (error) {
         console.log(error);

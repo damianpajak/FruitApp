@@ -1,7 +1,7 @@
 export const HomeLogo = () => {
   return (
     <div>
-      <img src="/img/fruits_logo.png" />
+      <img src="/public/img/fruits_logo.png" />
     </div>
   );
 };
