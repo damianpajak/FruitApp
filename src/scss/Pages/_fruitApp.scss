@@ -18,10 +18,6 @@
     text-align: center;
     overflow-y: scroll;
     scrollbar-width: thin;
-
-    &:nth-child(2) {
-      height: 95%;
-    }
   }
 
   .fruitApp_showNewRecipe {
@@ -213,6 +209,7 @@
     @include mixins.flexCenter;
     flex-direction: column;
     height: 100%;
+    padding: 1rem 0;
 
     &_header {
       color: variables.$primary-color;
