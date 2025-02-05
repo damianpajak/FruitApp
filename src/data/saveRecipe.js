@@ -20,7 +20,5 @@ export const saveRecipe = async (recipeData) => {
     console.error(error);
     return false;
   }
-
-  console.log(data);
   return true;
 };
