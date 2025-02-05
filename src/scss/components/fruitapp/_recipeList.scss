@@ -1,0 +1,53 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.recipeBox-header {
+  font-size: 3.5rem;
+  margin: 1.5rem 0;
+  color: variables.$primary-color;
+  font-weight: 600;
+}
+
+.recipeList {
+  @include mixins.flexCenter;
+  flex-direction: column;
+  width: 100%;
+
+  &_element {
+    @include mixins.flexCenter;
+    flex-direction: column;
+    cursor: pointer;
+    width: 90%;
+    background-color: variables.$fourth-color;
+    margin-bottom: 1rem;
+    border: 0.3rem solid variables.$primary-color;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: variables.$primary-color;
+    padding: 1.5rem 0;
+
+    &:hover {
+      background-color: variables.$second-color;
+      color: variables.$fifth-color;
+    }
+
+    button {
+      width: 20%;
+      padding: 0.4rem;
+      border-radius: 0.5rem;
+      border: 0.1rem solid variables.$primary-color;
+      margin-top: 0.8rem;
+
+      &:hover {
+        cursor: grab;
+      }
+    }
+
+    span {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: variables.$primary-color;
+    }
+  }
+}

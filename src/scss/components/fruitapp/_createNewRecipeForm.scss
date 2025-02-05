@@ -1,0 +1,68 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+@use "../fruitapp/formbuttons";
+
+.display-form {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 100%;
+  margin-bottom: 1rem;
+
+  .fruitApp_showNewRecipe-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    font-size: 1.4rem;
+    height: 100%;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      color: variables.$primary-color;
+      font-weight: 600;
+    }
+
+    .fruitApp_showNewRecipe-form_header {
+      font-size: 3.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: variables.$primary-color;
+    }
+
+    .showNewRecipe-form_label {
+      margin-top: 1rem;
+    }
+
+    .showNewRecipe-form_input,
+    .showNewRecipe-form_textarea,
+    .showNewRecipe-form_select {
+      font-family: variables.$primary-font;
+      background-color: variables.$fourth-color;
+      border: 0.1rem solid variables.$primary-color;
+      border-radius: 1rem;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      border: none;
+    }
+
+    .showNewRecipe-form_input {
+      border: 0.2rem solid variables.$primary-color;
+    }
+
+    .showNewRecipe-form_select {
+      border: 0.2rem solid variables.$primary-color;
+    }
+
+    .showNewRecipe-form_textarea {
+      resize: none;
+      height: 5rem;
+      padding: 0.5rem;
+      border: 0.2rem solid variables.$primary-color;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.fruitApp_viewBasic {
+  @include mixins.flexCenter;
+  flex-direction: column;
+  height: 100%;
+
+  .fruitApp_viewBasicText {
+    font-size: 3rem;
+    font-weight: 600;
+    color: variables.$primary-color;
+    width: 90%;
+
+    &:nth-child(2) {
+      margin: 3rem 0;
+    }
+  }
+}

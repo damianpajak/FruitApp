@@ -1,0 +1,66 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.recipeDataView {
+  @include mixins.flexCenter;
+  flex-direction: column;
+  margin: 0.5rem 0 2rem 0;
+
+  &_header {
+    color: variables.$primary-color;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0.6rem 0;
+  }
+
+  &_header-mini {
+    color: variables.$primary-color;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    span {
+      color: #1c1c1d;
+    }
+  }
+
+  &_data {
+    border: 0.2rem solid variables.$primary-color;
+    border-radius: 0.5rem;
+    width: 85%;
+    padding: 0.5rem 0;
+    overflow-wrap: break-word;
+    max-height: 1rem;
+    background-color: variables.$fourth-color;
+    font-weight: 600;
+  }
+
+  &_textarea {
+    border: 0.2rem solid variables.$primary-color;
+    border-radius: 0.5rem;
+    width: 85%;
+    padding: 2rem 0;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    max-height: 3rem;
+    background-color: variables.$fourth-color;
+    font-weight: 600;
+  }
+
+  &_table {
+    width: 85%;
+    th,
+    td {
+      border: 0.2rem solid variables.$primary-color;
+      padding: 0.5rem 0;
+    }
+
+    th {
+      font-weight: 600;
+      background-color: variables.$second-color;
+    }
+
+    td {
+      background-color: variables.$third-color;
+    }
+  }
+}

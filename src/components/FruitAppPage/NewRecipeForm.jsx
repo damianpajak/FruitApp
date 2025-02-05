@@ -53,84 +53,90 @@ export const NewRecipeForm = ({
   };
 
   return (
-    <form className="fruitApp_showNewRecipe-form">
-      <div>
-        <InputRecipe
-          title="Recipe name"
-          type="text"
-          name="name"
-          placeholder="Enter the name of the recipe ..."
-          className="showNewRecipe-form_input"
-          value={formValues.name || ""}
-          handleTyping={handleTyping}
+    <div className="display-form">
+      <form className="fruitApp_showNewRecipe-form">
+        <h1 className="fruitApp_showNewRecipe-form_header">
+          Complete the form:
+        </h1>
+        <div>
+          <InputRecipe
+            title="Recipe name"
+            type="text"
+            name="name"
+            placeholder="Enter the name of the recipe ..."
+            className="showNewRecipe-form_input"
+            value={formValues.name || ""}
+            handleTyping={handleTyping}
+          />
+          {errors.name && <p className="error-msg">{errors.name}</p>}
+        </div>
+        <div>
+          <InputRecipe
+            title="Author name"
+            type="text"
+            name="author"
+            placeholder="Enter the name of the recipe author ..."
+            className="showNewRecipe-form_input"
+            classNameLabel="showNewRecipe-form_label"
+            value={formValues.author || ""}
+            handleTyping={handleTyping}
+          />
+          {errors.author && <p className="error-msg">{errors.author}</p>}
+        </div>
+        <div>
+          <TextAreaRecipe
+            title="Add description"
+            type="text"
+            name="description"
+            placeholder="Enter description for recipe"
+            className="showNewRecipe-form_textarea"
+            classNameLabel="showNewRecipe-form_label"
+            value={formValues.description || ""}
+            handleTyping={handleTyping}
+          />
+          {errors.description && (
+            <p className="error-msg">{errors.description}</p>
+          )}
+        </div>
+        <div>
+          <TextAreaRecipe
+            title="How to prepare a salad"
+            type="text"
+            name="prepare"
+            placeholder="Enter description for recipe"
+            className="showNewRecipe-form_textarea"
+            classNameLabel="showNewRecipe-form_label"
+            value={formValues.prepare || ""}
+            handleTyping={handleTyping}
+          />
+          {errors.prepare && <p className="error-msg">{errors.prepare}</p>}
+        </div>
+        <div>
+          {[1, 2, 3, 4].map((num) => (
+            <div key={num}>
+              <SelectRecipe
+                title={`Pick fruit ${num}`}
+                name={`fruit${num}`}
+                className="showNewRecipe-form_select"
+                classNameLabel="showNewRecipe-form_label"
+                values={fruits || []}
+                handleTyping={handleTyping}
+              />
+              {errors[`fruit${num}`] && (
+                <p className="error-msg">{errors[`fruit${num}`]}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </form>
+      <div className="form-buttons">
+        <ButtonsRecipe
+          className="showNewRecipe-form_btn"
+          isSaving={isSaving}
+          handleSaveRecipe={handleSaveRecipe}
+          onCloseForm={onCloseForm}
         />
-        {errors.name && <p className="error-msg">{errors.name}</p>}
       </div>
-      <div>
-        <InputRecipe
-          title="Author name"
-          type="text"
-          name="author"
-          placeholder="Enter the name of the recipe author ..."
-          className="showNewRecipe-form_input"
-          classNameLabel="showNewRecipe-form_label"
-          value={formValues.author || ""}
-          handleTyping={handleTyping}
-        />
-        {errors.author && <p className="error-msg">{errors.author}</p>}
-      </div>
-      <div>
-        <TextAreaRecipe
-          title="Add description"
-          type="text"
-          name="description"
-          placeholder="Enter description for recipe"
-          className="showNewRecipe-form_textarea"
-          classNameLabel="showNewRecipe-form_label"
-          value={formValues.description || ""}
-          handleTyping={handleTyping}
-        />
-        {errors.description && (
-          <p className="error-msg">{errors.description}</p>
-        )}
-      </div>
-      <div>
-        <TextAreaRecipe
-          title="How to prepare a salad"
-          type="text"
-          name="prepare"
-          placeholder="Enter description for recipe"
-          className="showNewRecipe-form_textarea"
-          classNameLabel="showNewRecipe-form_label"
-          value={formValues.prepare || ""}
-          handleTyping={handleTyping}
-        />
-        {errors.prepare && <p className="error-msg">{errors.prepare}</p>}
-      </div>
-      <div>
-        {[1, 2, 3, 4].map((num) => (
-          <div key={num}>
-            <SelectRecipe
-              title={`Pick fruit ${num}`}
-              name={`fruit${num}`}
-              className="showNewRecipe-form_select"
-              classNameLabel="showNewRecipe-form_label"
-              values={fruits || []}
-              handleTyping={handleTyping}
-            />
-            {errors[`fruit${num}`] && (
-              <p className="error-msg">{errors[`fruit${num}`]}</p>
-            )}
-          </div>
-        ))}
-      </div>
-
-      <ButtonsRecipe
-        className="showNewRecipe-form_btn"
-        isSaving={isSaving}
-        handleSaveRecipe={handleSaveRecipe}
-        onCloseForm={onCloseForm}
-      />
-    </form>
+    </div>
   );
 };

@@ -1,0 +1,40 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+@use "../fruitapp/createNewRecipeForm";
+
+.fruitApp_showNewRecipe {
+  @include mixins.flexCenter;
+
+  .showNewRecipe {
+    position: relative;
+    width: 40%;
+    display: inline-block;
+    cursor: pointer;
+
+    .showNewRecipe_btn {
+      background-color: variables.$second-color;
+      color: variables.$fifth-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 1rem 0;
+      border-radius: 0.5rem;
+      box-shadow: 0 1rem 0 variables.$primary-color;
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      &:active {
+        top: 10px;
+        background-color: variables.$second-color;
+        box-shadow: inset 0 -0.3rem 0 variables.$primary-color;
+      }
+
+      i {
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}
