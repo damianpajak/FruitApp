@@ -7,5 +7,16 @@
   "rewrites": [
     { "source": "/api/(.*)", "destination": "api/server.js" },
     { "source": "/(.*)", "destination": "/dist/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "max-age=0, must-revalidate"
+        }
+      ]
+    }
   ]
 }
