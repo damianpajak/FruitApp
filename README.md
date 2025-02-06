@@ -2,10 +2,10 @@
 
 ## :green_salad: Tabel of contents
 
-* [General info] (#general-info)
-* [Technologies] (#technologies)
-* [Features] (#features)
-* [Detailed information] (#detailed-information)
+* [General info] (##general-info)
+* [Technologies] (##technologies)
+* [Features] (##features)
+* [Detailed information] (##detailed-information)
 
 ## :grapes: General info
 
