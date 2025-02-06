@@ -35,7 +35,7 @@ The project is created using the following technologies:
 
 ## :cherries: **Detailed information**
 
-The website was created on the basis of a ready-made API available on the website: `https://www.fruityvice.com/`
+The website was created on the basis of a ready-made API available on the website: [https://www.fruityvice.com/](https://www.fruityvice.com/)
 
 The website was made available on the **[Vercel](https://vercel.com/)** platform at: [https://fruit-app-swart.vercel.app/](https://fruit-app-swart.vercel.app/)
 
