@@ -1,10 +1,10 @@
 # :green_salad: FruitApp
 
-- [:green\_salad: FruitApp](#green_salad-fruitapp)
-  - [:grapes: General info](#grapes-general-info)
-  - [:strawberry: Technologies](#strawberry-technologies)
-  - [:banana: Features](#banana-features)
-  - [:cherries: Detailed information](#cherries-detailed-information)
+- :green\_salad: [FruitApp](#green_salad-fruitapp)
+  - :grapes: [General info](#grapes-general-info)
+  - :strawberry: [Technologies](#strawberry-technologies)
+  - :banana: [Features](#banana-features)
+  - :cherries: [Detailed information](#cherries-detailed-information)
 
 ## :grapes: General info
 
