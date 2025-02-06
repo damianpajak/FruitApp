@@ -39,7 +39,7 @@ The website was created on the basis of a ready-made API available on the websit
 
 The website was made available on the **[Vercel](https://vercel.com/)** platform at: [https://fruit-app-swart.vercel.app/](https://fruit-app-swart.vercel.app/)
 
-Data is saved in a database on the platform: 
+Data is saved in a database on the [Supabase](https://supabase.com/) platform.
 
 The website is supported on both phones and desktops.
 
