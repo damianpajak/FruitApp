@@ -36,3 +36,21 @@ The project is created using the following technologies:
 ## :cherries: **Detailed information**
 
 The website was created on the basis of a ready-made API available on the website: `https://www.fruityvice.com/`
+
+The website is supported on both phones and desktops.
+
+**Axios** technology is used for HTTP queries and is used to communicate with APIs.
+
+**CORS** and **Express.js** technologies are used to handle the backend for communication with APIs.
+
+**Node.js** is used in the project to run JavaScript on the server side, handle the backend, manage the API, and integrate with databases.
+
+**React** and **React-router** are used to build the interface of the page and React Router helps in navigating between pages.
+
+**Sass** technology is used to style the page.
+
+**Vite** was used to quickly build and run applications.
+
+**Prettier** and **Eslint** are used to format code and detect and fix errors in code.
+
+The website was made available on the **Vercel** platform at: `https://fruit-app-swart.vercel.app/`
