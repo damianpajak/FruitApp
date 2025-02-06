@@ -37,6 +37,10 @@ The project is created using the following technologies:
 
 The website was created on the basis of a ready-made API available on the website: `https://www.fruityvice.com/`
 
+The website was made available on the **[Vercel](https://vercel.com/)** platform at: [https://fruit-app-swart.vercel.app/](https://fruit-app-swart.vercel.app/)
+
+Data is saved in a database on the platform: 
+
 The website is supported on both phones and desktops.
 
 **Axios** technology is used for HTTP queries and is used to communicate with APIs.
@@ -53,4 +57,4 @@ The website is supported on both phones and desktops.
 
 **Prettier** and **Eslint** are used to format code and detect and fix errors in code.
 
-The website was made available on the **Vercel** platform at: `https://fruit-app-swart.vercel.app/`
+
