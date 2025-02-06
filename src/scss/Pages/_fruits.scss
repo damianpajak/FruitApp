@@ -64,3 +64,74 @@
   font-family: variables.$primary-font;
   font-size: 1.5rem;
 }
+
+@include mixins.respond(variables.$breakpoint-phone) {
+  .fruits {
+    @include mixins.flexCenter;
+    flex-direction: column;
+    padding: 30px 0 50px 0;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .fruit_input {
+        background-color: variables.$fifth-color;
+        margin: 0.5rem 1rem 1rem 1rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 1.5rem;
+        width: 20rem;
+        font-family: variables.$primary-font;
+        font-size: 1.5rem;
+      }
+
+      .fruit_select {
+        background-color: variables.$fifth-color;
+        margin: 0.5rem 1rem 1rem 1rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 1.5rem;
+        width: 24rem;
+        font-family: variables.$primary-font;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .fruits_header-title {
+    font-family: variables.$primary-font;
+    font-size: 3rem;
+    font-weight: 600;
+    color: variables.$primary-color;
+    margin: 1rem 0;
+  }
+
+  .fruits_table {
+    width: 100%;
+    border: 1px solid variables.$second-color;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    font-family: variables.$primary-font;
+    font-size: 1.2rem;
+
+    tr:nth-child(even) {
+      background-color: variables.$second-color;
+    }
+
+    .fruit_table-row-header {
+      background-color: variables.$primary-color;
+      box-shadow: 0 1px variables.$second-color;
+      color: variables.$fourth-color;
+      font-size: 1.4rem;
+    }
+
+    .fruit_table-cell {
+      padding: 15px 0 15px 15px;
+      width: 35rem;
+      font-weight: 500;
+    }
+  }
+}
