@@ -1,13 +1,6 @@
-# FruitApp
+# :green_salad: FruitApp
 
-## :green_salad: Tabel of contents
-
-- [FruitApp](#fruitapp)
-  - [:green\_salad: Tabel of contents](#green_salad-tabel-of-contents)
-  - [:grapes: General info](#grapes-general-info)
-  - [:strawberry: Technologies](#strawberry-technologies)
-  - [:banana: Features](#banana-features)
-  - [:cherries: Detailed information](#cherries-detailed-information)
+- [General info](#grapes-general-info)
 
 ## :grapes: General info
 
