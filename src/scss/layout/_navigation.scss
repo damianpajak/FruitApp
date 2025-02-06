@@ -11,9 +11,9 @@
     &_logo {
       @include mixins.flexCenter($justifyContent: space-between);
       flex-direction: row;
-      width: 195px;
+      width: 19.5rem;
       font-family: variables.$second-font;
-      font-size: 35px;
+      font-size: 3.5rem;
       color: variables.$third-color;
     }
 
@@ -28,6 +28,47 @@
         font-family: variables.$primary-font;
         outline: none;
         padding: 2.3rem 3.5rem;
+      }
+    }
+  }
+}
+
+@include mixins.respond(variables.$breakpoint-phone) {
+  .nav {
+    @include mixins.fixedLayout;
+
+    .nav-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+
+      &_logo {
+        @include mixins.flexCenter($justifyContent: center);
+        flex-direction: row;
+        width: 100%;
+        font-family: variables.$second-font;
+        font-size: 2.5rem;
+        color: variables.$third-color;
+      }
+
+      &_menu {
+        @include mixins.flexCenter;
+        height: 100%;
+
+        &-link {
+          text-decoration: none;
+          color: variables.$fourth-color;
+          font-weight: 600;
+          font-size: 2.4rem;
+          font-family: variables.$primary-font;
+          outline: none;
+          padding: 1.6rem 3rem;
+          max-width: 100%;
+          overflow-wrap: break-word;
+          word-wrap: break-word;
+          white-space: normal;
+        }
       }
     }
   }

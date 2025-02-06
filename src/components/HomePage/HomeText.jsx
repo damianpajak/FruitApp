@@ -1,6 +1,6 @@
 export const HomeText = () => {
   return (
-    <div>
+    <div className="home_info">
       <p className="home_text">
         The site is dedicated to fruits and information related to them.
       </p>

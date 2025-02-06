@@ -12,7 +12,9 @@
   .footer-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-align: justify;
+    height: 100%;
 
     .footer_text {
       &:nth-child(2) {
@@ -27,7 +29,7 @@
     text-decoration: none;
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
 
     a {
@@ -40,6 +42,47 @@
 
       &:hover {
         color: variables.$fourth-color;
+      }
+    }
+  }
+}
+
+@include mixins.respond(variables.$breakpoint-phone) {
+  .footer {
+    @include mixins.fixedLayout();
+    color: variables.$third-color;
+    font-size: 1.2rem;
+    font-family: variables.$primary-font;
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column-reverse;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    &_icons {
+      margin-top: 1rem;
+      font-size: 2.4rem;
+      text-align: center;
+      text-decoration: none;
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      a {
+        outline: none;
+      }
+
+      i {
+        margin: 1rem 0.5rem;
+        color: variables.$third-color;
+
+        &:hover {
+          color: variables.$fourth-color;
+        }
       }
     }
   }

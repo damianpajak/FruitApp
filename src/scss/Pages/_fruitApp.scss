@@ -33,3 +33,41 @@
     color: #ff3333;
   }
 }
+
+@include mixins.respond(variables.$breakpoint-phone) {
+  .fruitApp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    font-family: variables.$primary-font;
+
+    .fruitApp-container {
+      position: relative;
+      background-color: variables.$fifth-color;
+      width: 90%;
+      border: 0.6rem solid variables.$primary-color;
+      border-radius: 1rem;
+      text-align: center;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      margin-top: 1rem;
+
+      &:nth-child(1) {
+        height: 40vh;
+      }
+
+      &:nth-child(3) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .error-msg {
+      padding-top: 0.1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ff3333;
+    }
+  }
+}

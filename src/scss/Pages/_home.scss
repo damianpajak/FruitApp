@@ -41,7 +41,56 @@
   .typeEffect {
     overflow: hidden;
     border-right: 0.15em solid variables.$primary-color;
-    white-space: nowrap;
+    white-space: wrap;
+    text-align: center;
     animation: blink-caret 0.75s step-end infinite;
+  }
+}
+
+@include mixins.respond(variables.$breakpoint-phone) {
+  .home {
+    @include mixins.flexCenter;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    font-family: variables.$primary-font;
+
+    img {
+      width: 20rem;
+    }
+
+    .home_header {
+      font-size: 3rem;
+      font-weight: 600;
+      color: variables.$primary-color;
+    }
+    .home_info {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .home_text {
+        padding: 2rem 0 0 0;
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: 500;
+        width: 90%;
+
+        &:nth-child(1) {
+          padding-top: 6rem;
+        }
+      }
+    }
+
+    .typeEffect {
+      overflow: hidden;
+      border-right: 0.15em solid variables.$primary-color;
+      white-space: wrap;
+      text-align: center;
+      animation: blink-caret 0.75s step-end infinite;
+    }
   }
 }

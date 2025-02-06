@@ -10,4 +10,16 @@
   @include flexCenter;
   background-color: variables.$primary-color;
   height: 10vh;
+  
+  @include respond(variables.$breakpoint-phone) {
+    @include flexCenter;
+    background-color: variables.$primary-color;
+    height: 12rem;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
 }
